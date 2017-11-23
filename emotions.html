@@ -15,7 +15,7 @@
 
         <style type="text/css">
 
-            p {
+            body {
                 font-family: 'Cedarville Cursive', cursive;
                 font-size: 1.2em;
                 color: #d85052;
@@ -24,28 +24,29 @@
             h3 {
                 font-family: 'Amatic SC', cursive;
                 font-size: 1.5em;
-                color: #f7f7f7;
+                color: #efefef;
             }
 
             section {
                 display: block;
-				float: left;
+                float: left;
                 margin: 10px 0px 10px 0px;
-	        	white-space:nowrap;
+                white-space:nowrap;
             }
 
-            #upper {
+
+             #upper {
                 background-color: #ffada5;
-				width: 100%;
-				overflow-x: scroll;
-				white-space:nowrap;
+                width: 100%;
+                overflow-x: scroll;
+                white-space:nowrap;
             }
 
             #lower {
                 background-color: #d85052;
-				width: 100%;
-				overflow-x: scroll;
-				white-space:nowrap;
+                width: 100%;
+                overflow-x: scroll;
+                white-space:nowrap;
             }
 
             #lower h3 {
@@ -53,14 +54,61 @@
             }
 
             #lower p {
-                color: #f7f7f7;
+                color: #efefef;
             }
-		
-	    	.column {
+
+            .column {
                 display: inline-block;
                 width: auto;
                 padding: 10px;
                 vertical-align: text-top;
+            }
+
+            ul {
+                list-style-type: none;
+                padding-left:0;
+            }
+            
+            input {
+                  display: none;
+            }
+
+            
+            input:checked + label.negative {
+                background: #d85052;
+                color: #efefef;
+                padding: 2px;
+            }
+
+            .negative:hover {
+                border: solid 1px #d85052;
+                border-radius: 2px;
+                padding: 2px;
+            }
+
+            .positive {
+                color: #efefef;
+            }
+
+            input:checked + label.positive {
+                background: #efefef;
+                color: #f29991;
+                padding: 2px;
+            }
+
+            .positive:hover {
+                border: solid 1px #efefef;
+                border-radius: 2px;
+                padding: 2px;
+            }
+
+            .negative:focus,
+            .negative:active,
+            .positive:focus,
+            .positive:active {
+                background: #d85052;
+                color: #ffada5;
+                padding: 2px;
             }
 
         </style>
@@ -78,634 +126,1741 @@
                 <article>
 
                 <section id="upper">
-                    
+
                     <div class="column">
                         <h3>ANGRY</h3>
-                        <p>irritated<br>
-                        enraged<br>
-                        hostile<br>
-                        insulting<br>
-                        annoyed<br>
-                        upset<br>
-                        hateful<br>
-                        unpleasant<br>
-                        offensive<br>
-                        aggressive<br>
-                        bitter<br>
-                        frustrated<br>
-                        controlling<br>
-                        resentful<br>
-                        hotheaded<br>
-                        malicious<br>
-                        infuriated<br>
-                        critical<br>
-                        mean-spirited<br>
-                        violent<br>
-                        vindictive<br>
-                        sadistic<br>
-                        mean<br>
-                        spiteful<br>
-                        furious<br>
-                        agitated<br>
-                        antagonistic<br>
-                        repulsed<br>
-                        mad<br>
-                        cross<br>
-                        incensed<br>
-                        loud<br>
-                        reactive<br>
-                        swearing<br>
-                        abrupt<br>
-                        quarrelsome<br>
-                        venomous<br>
-                        irate<br>
-                        short-tempered<br>
-                        stubborn<br>
-                        rebellious<br>
-                        exasperated<br>
-                        impatient<br>
-                        contrary<br>
-                        condemning<br>
-                        seething<br>
-                        scornful<br>
-                        sarcastic<br>
-                        overbearing<br>
-                        sharp<br>
-                        poisonous<br>
-                        insulting<br>
-                        disrespectful<br>
-                        jealous<br>
-                        ticked-off<br>
-                        hitting<br>
-                        yelling<br>
-                        screaming<br>
-                        revengeful<br>
-                        retaliating<br>
-                        reprimanding<br>
-                        envious<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="irritated"/>
+                                    <label class="negative" for="irritated">irritated</label></li>
+
+                                <li><input type="checkbox" id="enraged"/>
+                                    <label class="negative" for="enraged">enraged</label></li>
+
+                                <li><input type="checkbox" id="hostile"/>
+                                    <label class="negative" for="hostile">hostile</label></li>
+
+                                <li><input type="checkbox" id="insulting"/>
+                                    <label class="negative" for="insulting">insulting</label></li>
+
+                                <li><input type="checkbox" id="annoyed"/>   
+                                    <label class="negative" for="annoyed">annoyed</label></li>
+
+                                <li><input type="checkbox" id="upset"/> 
+                                    <label class="negative" for="upset">upset</label></li>
+
+                                <li><input type="checkbox" id="hateful"/>   
+                                    <label class="negative" for="hateful">hateful</label></li>
+
+                                <li><input type="checkbox" id="unpleasant"/>    
+                                    <label class="negative" for="unpleasant">unpleasant</label></li>
+
+                                <li><input type="checkbox" id="offensive"/> 
+                                    <label class="negative" for="offensive">offensive</label></li>
+
+                                <li><input type="checkbox" id="aggressive"/>    
+                                    <label class="negative" for="aggressive">aggressive</label></li>
+
+                                <li><input type="checkbox" id="bitter"/>    
+                                    <label class="negative" for="bitter">bitter</label></li>
+
+                                <li><input type="checkbox" id="frustrated"/>    
+                                    <label class="negative" for="frustrated">frustrated</label></li>
+
+                                <li><input type="checkbox" id="controlling"/>   
+                                    <label class="negative" for="controlling">controlling</label></li>
+
+                                <li><input type="checkbox" id="resentful"/> 
+                                    <label class="negative" for="resentful">resentful</label></li>
+
+                                <li><input type="checkbox" id="hotheaded"/> 
+                                    <label class="negative" for="hotheaded">hotheaded</label></li>
+
+                                <li><input type="checkbox" id="malicious"/> 
+                                    <label class="negative" for="malicious">malicious</label></li>
+
+                                <li><input type="checkbox" id="infuriated"/>    
+                                    <label class="negative" for="infuriated">infuriated</label></li>
+
+                                <li><input type="checkbox" id="critical"/>  
+                                    <label class="negative" for="critical">critical</label></li>
+
+                                <li><input type="checkbox" id="mean-spirited"/> 
+                                    <label class="negative" for="mean-spirited">mean-spirited</label></li>
+
+                                <li><input type="checkbox" id="violent"/>   
+                                    <label class="negative" for="violent">violent</label></li>
+
+                                <li><input type="checkbox" id="vindictive"/>    
+                                    <label class="negative" for="vindictive">vindictive</label></li>
+
+                                <li><input type="checkbox" id="sadistic"/>  
+                                    <label class="negative" for="sadistic">sadistic</label></li>
+
+                                <li><input type="checkbox" id="mean"/>  
+                                    <label class="negative" for="mean">mean</label></li>
+
+                                <li><input type="checkbox" id="spiteful"/>  
+                                    <label class="negative" for="spiteful">spiteful</label></li>
+
+                                <li><input type="checkbox" id="furious"/>   
+                                    <label class="negative" for="furious">furious</label></li>
+
+                                <li><input type="checkbox" id="agitated"/>  
+                                    <label class="negative" for="agitated">agitated</label></li>
+
+                                <li><input type="checkbox" id="antagonistic"/>  
+                                    <label class="negative" for="antagonistic">antagonistic</label></li>
+
+                                <li><input type="checkbox" id="repulsed"/>  
+                                    <label class="negative" for="repulsed">repulsed</label></li>
+
+                                <li><input type="checkbox" id="mad"/>   
+                                    <label class="negative" for="mad">mad</label></li>
+
+                                <li><input type="checkbox" id="cross"/> 
+                                    <label class="negative" for="cross">cross</label></li>
+
+                                <li><input type="checkbox" id="incensed"/>  
+                                    <label class="negative" for="incensed">incensed</label></li>
+
+                                <li><input type="checkbox" id="loud"/>  
+                                    <label class="negative" for="loud">loud</label></li>
+
+                                <li><input type="checkbox" id="reactive"/>  
+                                    <label class="negative" for="reactive">reactive</label></li>
+
+                                <li><input type="checkbox" id="swearing"/>  
+                                    <label class="negative" for="swearing">swearing</label></li>
+
+                                <li><input type="checkbox" id="abrupt"/>    
+                                    <label class="negative" for="abrupt">abrupt</label></li>
+
+                                <li><input type="checkbox" id="quarrelsome"/>   
+                                    <label class="negative" for="quarrelsome">quarrelsome</label></li>
+
+                                <li><input type="checkbox" id="venomous"/>  
+                                    <label class="negative" for="venomous">venomous</label></li>
+
+                                <li><input type="checkbox" id="irate"/> 
+                                    <label class="negative" for="irate">irate</label></li>
+
+                                <li><input type="checkbox" id="short-tempered"/>    
+                                    <label class="negative" for="short-tempered">short-tempered</label></li>
+
+                                <li><input type="checkbox" id="stubborn"/>  
+                                    <label class="negative" for="stubborn">stubborn</label></li>
+
+                                <li><input type="checkbox" id="rebellious"/>    
+                                    <label class="negative" for="rebellious">rebellious</label></li>
+
+                                <li><input type="checkbox" id="exasperated"/>   
+                                    <label class="negative" for="exasperated">exasperated</label></li>
+
+                                <li><input type="checkbox" id="impatient"/> 
+                                    <label class="negative" for="impatient">impatient</label></li>
+
+                                <li><input type="checkbox" id="contrary"/>  
+                                    <label class="negative" for="contrary">contrary</label></li>
+
+                                <li><input type="checkbox" id="condemning"/>    
+                                    <label class="negative" for="condemning">condemning</label></li>
+
+                                <li><input type="checkbox" id="seething"/>
+                                    <label class="negative" for="seething">seething</label></li>
+
+                                <li><input type="checkbox" id="scornful"/>
+                                    <label class="negative" for="scornful">scornful</label></li>
+
+                                <li><input type="checkbox" id="sarcastic"/>
+                                    <label class="negative" for="sarcastic">sarcastic</label></li>
+
+                                <li><input type="checkbox" id="overbearing"/>
+                                    <label class="negative" for="overbearing">overbearing</label></li>
+
+                                <li><input type="checkbox" id="sharp"/>
+                                    <label class="negative" for="sharp">sharp</label></li>
+
+                                <li><input type="checkbox" id="poisonous"/>
+                                    <label class="negative" for="poisonous">poisonous</label></li>
+
+                                <li><input type="checkbox" id="disrespectful"/>
+                                    <label class="negative" for="disrespectful">disrespectful</label></li>
+
+                                <li><input type="checkbox" id="jealous"/>
+                                    <label class="negative" for="jealous">jealous</label></li>
+
+                                <li><input type="checkbox" id="ticked-off"/>
+                                    <label class="negative" for="ticked-off">ticked-off</label></li>
+
+                                <li><input type="checkbox" id="hitting"/>
+                                    <label class="negative" for="hitting">hitting</label></li>
+
+                                <li><input type="checkbox" id="yelling"/>
+                                    <label class="negative" for="yelling">yelling</label></li>
+
+                                <li><input type="checkbox" id="screaming"/>
+                                    <label class="negative" for="screaming">screaming</label></li>
+
+                                <li><input type="checkbox" id="revengeful"/>
+                                    <label class="negative" for="revengeful">revengeful</label></li>
+
+                                <li><input type="checkbox" id="retaliating"/>
+                                    <label class="negative" for="retaliating">retaliating</label></li>
+
+                                <li><input type="checkbox" id="reprimanding"/>
+                                    <label class="negative" for="reprimanding">reprimanding</label></li>
+
+                                <li><input type="checkbox" id="envious"/>
+                                    <label class="negative" for="envious">envious</label></li>
+                            </ul>
                     </div>
                     
                     <div class="column">
-                    	<h3>DEPRESSED</h3>
-                        <p>disappointed<br>
-                        discouraged<br>
-                        ashamed<br>
-                        powerless<br>
-                        diminished<br>
-                        guilty<br>
-                        dissatisfied<br>
-                        miserable<br>
-                        despicable<br>
-                        self-denigrating<br>
-                        self-hating<br>
-                        sulky<br>
-                        low<br>
-                        terrible<br>
-                        lousy<br>
-                        desperate<br>
-                        alienated<br>
-                        bad<br>
-                        pessimistic<br>
-                        dejected<br>
-                        bummed out<br>
-                        self-critical<br>
-                        self-deprecating<br>
-                        gloomy<br>
-                        glum<br>
-                        disheartened<br>
-                        down<br>
-                        despondent<br>
-                        cheerless<br>
-                        rotten<br>
-                        masochistic<br>
-                        stuck<br>
-                        contracted<br>
-                        tight<br>
-                        blocked<br>
-                        despairing<br>
-                        hopeless<br>
-                        grouchy<br>
-                        off<br>
-                        moody<br>
-                        crabby<br>
-                        fault-finding<br>
-                        resistant<br>
-                        punishing<br>
-                        morose<br>
-                        cranky<br>
-                        grumpy<br>
-                        burdened<br>
-                        negative<br>
-                        closed<br>
-                        out-of-sorts<br>
-                        no energy<br>
-                        in hell<br>
-                        touchy<br>
-                        haggard<br>
-                        drawn<br>
-                        slumped<br>
-                        slouching<br>
-                        achy<br></p>
+                        <h3>DEPRESSED</h3>
+                            <ul>
+                                <li><input type="checkbox" id="disappointed"/>
+                                    <label class="negative" for="disappointed">disappointed</label></li>
+
+                                    <li><input type="checkbox" id="discouraged"/>
+                                    <label class="negative" for="discouraged">discouraged</label></li>
+
+                                    <li><input type="checkbox" id="ashamed"/>
+                                    <label class="negative" for="ashamed">ashamed</label></li>
+
+                                    <li><input type="checkbox" id="powerless"/>
+                                    <label class="negative" for="powerless">powerless</label></li>
+
+                                    <li><input type="checkbox" id="diminished"/>
+                                    <label class="negative" for="diminished">diminished</label></li>
+
+                                    <li><input type="checkbox" id="guilty"/>
+                                    <label class="negative" for="guilty">guilty</label></li>
+
+                                    <li><input type="checkbox" id="dissatisfied"/>
+                                    <label class="negative" for="dissatisfied">dissatisfied</label></li>
+
+                                    <li><input type="checkbox" id="miserable"/>
+                                    <label class="negative" for="miserable">miserable</label></li>
+
+                                    <li><input type="checkbox" id="despicable"/>
+                                    <label class="negative" for="despicable">despicable</label></li>
+
+                                    <li><input type="checkbox" id="self-denigrating"/>
+                                    <label class="negative" for="self-denigrating">self-denigrating</label></li>
+
+                                    <li><input type="checkbox" id="self-hating"/>
+                                    <label class="negative" for="self-hating">self-hating</label></li>
+
+                                    <li><input type="checkbox" id="sulky"/>
+                                    <label class="negative" for="sulky">sulky</label></li>
+
+                                    <li><input type="checkbox" id="low"/>
+                                    <label class="negative" for="low">low</label></li>
+
+                                    <li><input type="checkbox" id="terrible"/>
+                                    <label class="negative" for="terrible">terrible</label></li>
+
+                                    <li><input type="checkbox" id="lousy"/>
+                                    <label class="negative" for="lousy">lousy</label></li>
+
+                                    <li><input type="checkbox" id="desperate"/>
+                                    <label class="negative" for="desperate">desperate</label></li>
+
+                                    <li><input type="checkbox" id="alienated"/>
+                                    <label class="negative" for="alienated">alienated</label></li>
+
+                                    <li><input type="checkbox" id="bad"/>
+                                    <label class="negative" for="bad">bad</label></li>
+
+                                    <li><input type="checkbox" id="pessimistic"/>
+                                    <label class="negative" for="pessimistic">pessimistic</label></li>
+
+                                    <li><input type="checkbox" id="dejected"/>
+                                    <label class="negative" for="dejected">dejected</label></li>
+
+                                    <li><input type="checkbox" id="bummed out"/>
+                                    <label class="negative" for="bummed out">bummed out</label></li>
+
+                                    <li><input type="checkbox" id="self-critical"/>
+                                    <label class="negative" for="self-critical">self-critical</label></li>
+
+                                    <li><input type="checkbox" id="self-deprecating"/>
+                                    <label class="negative" for="self-deprecating">self-deprecating</label></li>
+
+                                    <li><input type="checkbox" id="gloomy"/>
+                                    <label class="negative" for="gloomy">gloomy</label></li>
+
+                                    <li><input type="checkbox" id="glum"/>
+                                    <label class="negative" for="glum">glum</label></li>
+
+                                    <li><input type="checkbox" id="disheartened"/>
+                                    <label class="negative" for="disheartened">disheartened</label></li>
+
+                                    <li><input type="checkbox" id="down"/>
+                                    <label class="negative" for="down">down</label></li>
+
+                                    <li><input type="checkbox" id="despondent"/>
+                                    <label class="negative" for="despondent">despondent</label></li>
+
+                                    <li><input type="checkbox" id="cheerless"/>
+                                    <label class="negative" for="cheerless">cheerless</label></li>
+
+                                    <li><input type="checkbox" id="rotten"/>
+                                    <label class="negative" for="rotten">rotten</label></li>
+
+                                    <li><input type="checkbox" id="masochistic"/>
+                                    <label class="negative" for="masochistic">masochistic</label></li>
+
+                                    <li><input type="checkbox" id="stuck"/>
+                                    <label class="negative" for="stuck">stuck</label></li>
+
+                                    <li><input type="checkbox" id="contracted"/>
+                                    <label class="negative" for="contracted">contracted</label></li>
+
+                                    <li><input type="checkbox" id="tight"/>
+                                    <label class="negative" for="tight">tight</label></li>
+
+                                    <li><input type="checkbox" id="blocked"/>
+                                    <label class="negative" for="blocked">blocked</label></li>
+
+                                    <li><input type="checkbox" id="despairing"/>
+                                    <label class="negative" for="despairing">despairing</label></li>
+
+                                    <li><input type="checkbox" id="hopeless"/>
+                                    <label class="negative" for="hopeless">hopeless</label></li>
+
+                                    <li><input type="checkbox" id="grouchy"/>
+                                    <label class="negative" for="grouchy">grouchy</label></li>
+
+                                    <li><input type="checkbox" id="off"/>
+                                    <label class="negative" for="off">off</label></li>
+
+                                    <li><input type="checkbox" id="moody"/>
+                                    <label class="negative" for="moody">moody</label></li>
+
+                                    <li><input type="checkbox" id="crabby"/>
+                                    <label class="negative" for="crabby">crabby</label></li>
+
+                                    <li><input type="checkbox" id="fault-finding"/>
+                                    <label class="negative" for="fault-finding">fault-finding</label></li>
+
+                                    <li><input type="checkbox" id="resistant"/>
+                                    <label class="negative" for="resistant">resistant</label></li>
+
+                                    <li><input type="checkbox" id="punishing"/>
+                                    <label class="negative" for="punishing">punishing</label></li>
+
+                                    <li><input type="checkbox" id="morose"/>
+                                    <label class="negative" for="morose">morose</label></li>
+
+                                    <li><input type="checkbox" id="cranky"/>
+                                    <label class="negative" for="cranky">cranky</label></li>
+
+                                    <li><input type="checkbox" id="grumpy"/>
+                                    <label class="negative" for="grumpy">grumpy</label></li>
+
+                                    <li><input type="checkbox" id="burdened"/>
+                                    <label class="negative" for="burdened">burdened</label></li>
+
+                                    <li><input type="checkbox" id="negative"/>
+                                    <label class="negative" for="negative">negative</label></li>
+
+                                    <li><input type="checkbox" id="closed"/>
+                                    <label class="negative" for="closed">closed</label></li>
+
+                                    <li><input type="checkbox" id="out-of-sorts"/>
+                                    <label class="negative" for="out-of-sorts">out-of-sorts</label></li>
+
+                                    <li><input type="checkbox" id="no energy"/>
+                                    <label class="negative" for="no energy">no energy</label></li>
+
+                                    <li><input type="checkbox" id="in hell"/>
+                                    <label class="negative" for="in hell">in hell</label></li>
+
+                                    <li><input type="checkbox" id="touchy"/>
+                                    <label class="negative" for="touchy">touchy</label></li>
+
+                                    <li><input type="checkbox" id="haggard"/>
+                                    <label class="negative" for="haggard">haggard</label></li>
+
+                                    <li><input type="checkbox" id="drawn"/>
+                                    <label class="negative" for="drawn">drawn</label></li>
+
+                                    <li><input type="checkbox" id="slumped"/>
+                                    <label class="negative" for="slumped">slumped</label></li>
+
+                                    <li><input type="checkbox" id="slouching"/>
+                                    <label class="negative" for="slouching">slouching</label></li>
+
+                                    <li><input type="checkbox" id="achy"/>
+                                    <label class="negative" for="achy">achy</label></li>
+                                </ul>
                     </div>
 
-				    <div class="column">
+                    <div class="column">
                         <h3>CONFUSED</h3>
-                        <p>doubtful<br>
-                        uncertain<br>
-                        indecisive<br>
-                        perplexed<br>
-                        embarrassed<br>
-                        hesitant<br>
-                        shy<br>
-                        disillusioned<br>
-                        distrustful<br>
-                        misgiving<br>
-                        lost<br>
-                        unsure<br>
-                        uneasy<br>
-                        tense<br>
-                        stressed<br>
-                        uncomfortable<br>
-                        comparing<br>
-                        dishonest<br>
-                        superior<br>
-                        disdainful<br>
-                        manipulative<br>
-                        judgmental<br>
-                        argumentative<br>
-                        authoritative<br>
-                        condescending<br>
-                        demanding<br>
-                        confounded<br>
-                        distracted<br>
-                        disoriented<br>
-                        off-kilter<br>
-                        frenzied<br>
-                        blushing<br>
-                        awkward<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="doubtful"/>
+                                    <label class="negative" for="doubtful">doubtful</label></li>
+
+                                    <li><input type="checkbox" id="uncertain"/>
+                                    <label class="negative" for="uncertain">uncertain</label></li>
+
+                                    <li><input type="checkbox" id="indecisive"/>
+                                    <label class="negative" for="indecisive">indecisive</label></li>
+
+                                    <li><input type="checkbox" id="perplexed"/>
+                                    <label class="negative" for="perplexed">perplexed</label></li>
+
+                                    <li><input type="checkbox" id="embarrassed"/>
+                                    <label class="negative" for="embarrassed">embarrassed</label></li>
+
+                                    <li><input type="checkbox" id="shy"/>
+                                    <label class="negative" for="shy">shy</label></li>
+
+                                    <li><input type="checkbox" id="disillusioned"/>
+                                    <label class="negative" for="disillusioned">disillusioned</label></li>
+
+                                    <li><input type="checkbox" id="distrustful"/>
+                                    <label class="negative" for="distrustful">distrustful</label></li>
+
+                                    <li><input type="checkbox" id="misgiving"/>
+                                    <label class="negative" for="misgiving">misgiving</label></li>
+
+                                    <li><input type="checkbox" id="lost"/>
+                                    <label class="negative" for="lost">lost</label></li>
+
+                                    <li><input type="checkbox" id="unsure"/>
+                                    <label class="negative" for="unsure">unsure</label></li>
+
+                                    <li><input type="checkbox" id="uneasy"/>
+                                    <label class="negative" for="uneasy">uneasy</label></li>
+
+                                    <li><input type="checkbox" id="tense"/>
+                                    <label class="negative" for="tense">tense</label></li>
+
+                                    <li><input type="checkbox" id="stressed"/>
+                                    <label class="negative" for="stressed">stressed</label></li>
+
+                                    <li><input type="checkbox" id="uncomfortable"/>
+                                    <label class="negative" for="uncomfortable">uncomfortable</label></li>
+
+                                    <li><input type="checkbox" id="comparing"/>
+                                    <label class="negative" for="comparing">comparing</label></li>
+
+                                    <li><input type="checkbox" id="dishonest"/>
+                                    <label class="negative" for="dishonest">dishonest</label></li>
+
+                                    <li><input type="checkbox" id="disdainful"/>
+                                    <label class="negative" for="disdainful">disdainful</label></li>
+
+                                    <li><input type="checkbox" id="manipulative"/>
+                                    <label class="negative" for="manipulative">manipulative</label></li>
+
+                                    <li><input type="checkbox" id="argumentative"/>
+                                    <label class="negative" for="argumentative">argumentative</label></li>
+
+                                    <li><input type="checkbox" id="authoritative"/>
+                                    <label class="negative" for="authoritative">authoritative</label></li>
+
+                                    <li><input type="checkbox" id="condescending"/>
+                                    <label class="negative" for="condescending">condescending</label></li>
+
+                                    <li><input type="checkbox" id="demanding"/>
+                                    <label class="negative" for="demanding">demanding</label></li>
+
+                                    <li><input type="checkbox" id="confounded"/>
+                                    <label class="negative" for="confounded">confounded</label></li>
+
+                                    <li><input type="checkbox" id="distracted"/>
+                                    <label class="negative" for="distracted">distracted</label></li>
+
+                                    <li><input type="checkbox" id="disoriented"/>
+                                    <label class="negative" for="disoriented">disoriented</label></li>
+
+                                    <li><input type="checkbox" id="off-kilter"/>
+                                    <label class="negative" for="off-kilter">off-kilter</label></li>
+
+                                    <li><input type="checkbox" id="frenzied"/>
+                                    <label class="negative" for="frenzied">frenzied</label></li>
+
+                                    <li><input type="checkbox" id="blushing"/>
+                                    <label class="negative" for="blushing">blushing</label></li>
+
+                                    <li><input type="checkbox" id="awkward"/>
+                                    <label class="negative" for="awkward">awkward</label></li>
+                                </ul>
                     </div>
 
                     <div class="column">
                         <h3>HELPLESS</h3>
-                        <p>incapable<br>
-                        alone<br>
-                        paralyzed<br>
-                        fatigued<br>
-                        useless<br>
-                        inferior<br>
-                        vulnerable<br>
-                        empty<br>
-                        distressed<br>
-                        pathetic<br>
-                        distraught<br>
-                        doomed<br>
-                        overwhelmed<br>
-                        incompetent<br>
-                        inept<br>
-                        incapacitated<br>
-                        shut down<br>
-                        cut off<br>
-                        trapped<br>
-                        weak<br>
-                        sick<br>
-                        nauseated<br>
-                        fidgety<br>
-                        trembling<br>
-                        craving<br>
-                        hungry<br>
-                        squirming<br>
-                        jittery<br>
-                        woozy<br>
-                        twitching<br>
-                        compulsive<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="incapable"/>
+                                    <label class="negative" for="incapable">incapable</label></li>
+
+                                <li><input type="checkbox" id="alone"/>
+                                    <label class="negative" for="alone">alone</label></li>
+                                    
+                                <li><input type="checkbox" id="paralyzed"/>
+                                    <label class="negative" for="paralyzed">paralyzed</label></li>
+                                    
+                                <li><input type="checkbox" id="fatigued"/>
+                                    <label class="negative" for="fatigued">fatigued</label></li>
+
+                                <li><input type="checkbox" id="useless"/>
+                                    <label class="negative" for="useless">useless</label></li>
+
+                                <li><input type="checkbox" id="inferior"/>
+                                    <label class="negative" for="inferior">inferior</label></li>
+
+                                <li><input type="checkbox" id="vulnerable"/>
+                                    <label class="negative" for="vulnerable">vulnerable</label></li>
+
+                                <li><input type="checkbox" id="empty"/>
+                                    <label class="negative" for="empty">empty</label></li>  
+
+                                <li><input type="checkbox" id="distressed"/>
+                                    <label class="negative" for="distressed">distressed</label></li>    
+
+                                <li><input type="checkbox" id="pathetic"/>
+                                    <label class="negative" for="pathetic">pathetic</label></li>    
+
+                                <li><input type="checkbox" id="distraught"/>
+                                    <label class="negative" for="distraught">distraught</label></li>    
+
+                                <li><input type="checkbox" id="doomed"/>
+                                    <label class="negative" for="doomed">doomed</label></li>    
+
+                                <li><input type="checkbox" id="overwhelmed"/>
+                                    <label class="negative" for="overwhelmed">overwhelmed</label></li>  
+
+                                <li><input type="checkbox" id="incompetent"/>
+                                    <label class="negative" for="incompetent">incompetent</label></li>  
+
+                                <li><input type="checkbox" id="inept"/>
+                                    <label class="negative" for="inept">inept</label></li>  
+
+                                <li><input type="checkbox" id="incapacitated"/>
+                                    <label class="negative" for="incapacitated">incapacitated</label></li>  
+
+                                <li><input type="checkbox" id="shut down"/>
+                                    <label class="negative" for="shut down">shut down</label></li>  
+
+                                <li><input type="checkbox" id="cut off"/>
+                                    <label class="negative" for="cut off">cut off</label></li>  
+
+                                <li><input type="checkbox" id="trapped"/>
+                                    <label class="negative" for="trapped">trapped</label></li>  
+
+                                <li><input type="checkbox" id="weak"/>
+                                    <label class="negative" for="weak">weak</label></li>    
+
+                                <li><input type="checkbox" id="sick"/>
+                                    <label class="negative" for="sick">sick</label></li>    
+
+                                <li><input type="checkbox" id="nauseated"/>
+                                    <label class="negative" for="nauseated">nauseated</label></li>  
+
+                                <li><input type="checkbox" id="fidgety"/>
+                                    <label class="negative" for="fidgety">fidgety</label></li>  
+
+                                <li><input type="checkbox" id="trembling"/>
+                                    <label class="negative" for="trembling">trembling</label></li>  
+
+                                <li><input type="checkbox" id="craving"/>
+                                    <label class="negative" for="craving">craving</label></li>  
+
+                                <li><input type="checkbox" id="hungry"/>
+                                    <label class="negative" for="hungry">hungry</label></li>
+
+                                <li><input type="checkbox" id="squirming"/>
+                                    <label class="negative" for="squirming">squirming</label></li>
+
+                                <li><input type="checkbox" id="jittery"/>
+                                    <label class="negative" for="jittery">jittery</label></li>
+
+                                <li><input type="checkbox" id="woozy"/>
+                                    <label class="negative" for="woozy">woozy</label></li>
+
+                                <li><input type="checkbox" id="twitching"/>
+                                    <label class="negative" for="twitching">twitching</label></li>
+
+                                <li><input type="checkbox" id="compulsive"/>
+                                    <label class="negative" for="compulsive">compulsive</label></li>    
+                            </ul>   
                     </div>
                     
                     <div class="column">
                         <h3>INDIFFERENT</h3>
-                        <p>insensitive<br>
-                        dull<br>
-                        reserved<br>
-                        weary<br>
-                        bored<br>
-                        preoccupied<br>
-                        cold<br>
-                        lifeless<br>
-                        uncaring<br>
-                        uninterested<br>
-                        unresponsive<br>
-                        tired<br>
-                        robotic<br>
-                        slow<br>
-                        sluggish<br></p>
-		            </div>
+                            <ul>
+                                <li><input type="checkbox" id="insensitive"/>
+                                    <label class="negative" for="insensitive">insensitive</label></li>
+
+                                <li><input type="checkbox" id="dull"/>
+                                    <label class="negative" for="dull">dull</label></li>
+
+                                <li><input type="checkbox" id="reserved"/>
+                                    <label class="negative" for="reserved">reserved</label></li>
+
+                                <li><input type="checkbox" id="weary"/>
+                                    <label class="negative" for="weary">weary</label></li>
+
+                                <li><input type="checkbox" id="bored"/>
+                                    <label class="negative" for="bored">bored</label></li>
+
+                                <li><input type="checkbox" id="preoccupied"/>
+                                    <label class="negative" for="preoccupied">preoccupied</label></li>
+
+                                <li><input type="checkbox" id="cold"/>
+                                    <label class="negative" for="cold">cold</label></li>
+
+                                <li><input type="checkbox" id="lifeless"/>
+                                    <label class="negative" for="lifeless">lifeless</label></li>
+
+                                <li><input type="checkbox" id="uncaring"/>
+                                    <label class="negative" for="uncaring">uncaring</label></li>
+
+                                <li><input type="checkbox" id="unresponsive"/>
+                                    <label class="negative" for="unresponsive">unresponsive</label></li>
+
+                                <li><input type="checkbox" id="tired"/>
+                                    <label class="negative" for="tired">tired</label></li>
+
+                                <li><input type="checkbox" id="robotic"/>
+                                    <label class="negative" for="robotic">robotic</label></li>
+
+                                <li><input type="checkbox" id="slow"/>
+                                    <label class="negative" for="slow">slow</label></li>
+
+                                <li><input type="checkbox" id="sluggish"/>
+                                    <label class="negative" for="sluggish">sluggish</label></li>
+                            </ul>
+                    </div>
 
                     <div class="column">
                         <h3>AFRAID</h3>
-                        <p>fearful<br>
-                        terrified<br>
-                        suspicious<br>
-                        anxious<br>
-                        alarmed<br>
-                        panicked<br>
-                        nervous<br>
-                        scared<br>
-                        worried<br>
-                        frightened<br>
-                        timid<br>
-                        shaky<br>
-                        restless<br>
-                        threatened<br>
-                        cowardly<br>
-                        insecure<br>
-                        wary<br>
-                        menaced<br>
-                        uptight<br>
-                        apprehensive<br>
-                        attacking<br>
-                        defensive<br>
-                        dreadful<br>
-                        guarded<br>
-                        troubled<br>
-                        selfabsorbed<br>
-                        rigid<br>
-                        phobic<br>
-                        intolerant<br>
-                        disturbed<br>
-                        disrupted<br>
-                        intimidated<br>
-                        avoiding<br>
-                        unwelcoming<br>
-                        petrified<br>
-                        unbending<br>
-                        paranoid<br>
-                        inhibited<br>
-                        immobile<br>
-                        attached<br>
-                        prejudiced<br>
-                        agoraphobic<br>
-                        self-conscious<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="fearful"/>
+                                    <label class="negative" for="fearful">fearful</label></li>
+
+                                <li><input type="checkbox" id="terrified"/>
+                                    <label class="negative" for="terrified">terrified</label></li>
+
+                                <li><input type="checkbox" id="suspicious"/>
+                                    <label class="negative" for="suspicious">suspicious</label></li>
+
+                                <li><input type="checkbox" id="anxious"/>
+                                    <label class="negative" for="anxious">anxious</label></li>
+
+                                <li><input type="checkbox" id="alarmed"/>
+                                    <label class="negative" for="alarmed">alarmed</label></li>
+
+                                <li><input type="checkbox" id="panicked"/>
+                                    <label class="negative" for="panicked">panicked</label></li>
+
+                                <li><input type="checkbox" id="nervous"/>
+                                    <label class="negative" for="nervous">nervous</label></li>
+
+                                <li><input type="checkbox" id="scared"/>
+                                    <label class="negative" for="scared">scared</label></li>
+
+                                <li><input type="checkbox" id="worried"/>
+                                    <label class="negative" for="worried">worried</label></li>
+
+                                <li><input type="checkbox" id="frightened"/>
+                                    <label class="negative" for="frightened">frightened</label></li>
+
+                                <li><input type="checkbox" id="timid"/>
+                                    <label class="negative" for="timid">timid</label></li>
+
+                                <li><input type="checkbox" id="shaky"/>
+                                    <label class="negative" for="shaky">shaky</label></li>
+
+                                <li><input type="checkbox" id="restless"/>
+                                    <label class="negative" for="restless">restless</label></li>
+
+                                <li><input type="checkbox" id="threatened"/>
+                                    <label class="negative" for="threatened">threatened</label></li>
+
+                                <li><input type="checkbox" id="cowardly"/>
+                                    <label class="negative" for="cowardly">cowardly</label></li>
+
+                                <li><input type="checkbox" id="insecure"/>
+                                    <label class="negative" for="insecure">insecure</label></li>
+
+                                <li><input type="checkbox" id="wary"/>
+                                    <label class="negative" for="wary">wary</label></li>
+
+                                <li><input type="checkbox" id="menaced"/>
+                                    <label class="negative" for="menaced">menaced</label></li>
+
+                                <li><input type="checkbox" id="uptight"/>
+                                    <label class="negative" for="uptight">uptight</label></li>
+
+                                <li><input type="checkbox" id="apprehensive"/>
+                                    <label class="negative" for="apprehensive">apprehensive</label></li>
+
+                                <li><input type="checkbox" id="attacking"/>
+                                    <label class="negative" for="attacking">attacking</label></li>
+
+                                <li><input type="checkbox" id="defensive"/>
+                                    <label class="negative" for="defensive">defensive</label></li>
+
+                                <li><input type="checkbox" id="dreadful"/>
+                                    <label class="negative" for="dreadful">dreadful</label></li>
+
+                                <li><input type="checkbox" id="guarded"/>
+                                    <label class="negative" for="guarded">guarded</label></li>
+
+                                <li><input type="checkbox" id="troubled"/>
+                                    <label class="negative" for="troubled">troubled</label></li>
+
+                                <li><input type="checkbox" id="self-absorbed"/>
+                                    <label class="negative" for="self-absorbed">self-absorbed</label></li>
+
+                                <li><input type="checkbox" id="rigid"/>
+                                    <label class="negative" for="rigid">rigid</label></li>
+
+                                <li><input type="checkbox" id="phobic"/>
+                                    <label class="negative" for="phobic">phobic</label></li>
+
+                                <li><input type="checkbox" id="intolerant"/>
+                                    <label class="negative" for="intolerant">intolerant</label></li>
+
+                                <li><input type="checkbox" id="disturbed"/>
+                                    <label class="negative" for="disturbed">disturbed</label></li>
+
+                                <li><input type="checkbox" id="disrupted"/>
+                                    <label class="negative" for="disrupted">disrupted</label></li>
+
+                                <li><input type="checkbox" id="intimidated"/>
+                                    <label class="negative" for="intimidated">intimidated</label></li>
+
+                                <li><input type="checkbox" id="avoiding"/>
+                                    <label class="negative" for="avoiding">avoiding</label></li>
+
+                                <li><input type="checkbox" id="unwelcoming"/>
+                                    <label class="negative" for="unwelcoming">unwelcoming</label></li>
+
+                                <li><input type="checkbox" id="petrified"/>
+                                    <label class="negative" for="petrified">petrified</label></li>
+
+                                <li><input type="checkbox" id="unbending"/>
+                                    <label class="negative" for="unbending">unbending</label></li>
+
+                                <li><input type="checkbox" id="paranoid"/>
+                                    <label class="negative" for="paranoid">paranoid</label></li>
+
+                                <li><input type="checkbox" id="inhibited"/>
+                                    <label class="negative" for="inhibited">inhibited</label></li>
+
+                                <li><input type="checkbox" id="immobile"/>
+                                    <label class="negative" for="immobile">immobile</label></li>
+
+                                <li><input type="checkbox" id="attached"/>
+                                    <label class="negative" for="attached">attached</label></li>
+
+                                <li><input type="checkbox" id="prejudiced"/>
+                                    <label class="negative" for="prejudiced">prejudiced</label></li>
+
+                                <li><input type="checkbox" id="agoraphobic"/>
+                                    <label class="negative" for="agoraphobic">agoraphobic</label></li>
+
+                                <li><input type="checkbox" id="self-conscious"/>
+                                    <label class="negative" for="self-conscious">self-conscious</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>HURT</h3>
-                        <p>crushed<br>
-                        tormented<br>
-                        deprived<br>
-                        pained<br>
-                        tortured<br>
-                        rejected<br>
-                        injured<br>
-                        offended<br>
-                        afflicted<br>
-                        aching<br>
-                        victimized<br>
-                        heartbroken<br>
-                        agonized<br>
-                        appalled<br>
-                        wronged<br>
-                        humiliated<br>
-                        insulted<br>
-                        withdrawn<br>
-                        miffed<br>
-                        indignant<br>
-                        suffering<br>
-                        distant<br>
-                        invaded<br>
-                        bulldozed<br>
-                        bullied<br>
-                        secretive<br>
-                        slighted<br>
-                        smothered<br>
-                        belittled<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="crushed"/>
+                                    <label class="negative" for="crushed">crushed</label></li>
+
+                                <li><input type="checkbox" id="tormented"/>
+                                    <label class="negative" for="tormented">tormented</label></li>
+
+                                <li><input type="checkbox" id="deprived"/>
+                                    <label class="negative" for="deprived">deprived</label></li>
+
+                                <li><input type="checkbox" id="pained"/>
+                                    <label class="negative" for="pained">pained</label></li>
+
+                                <li><input type="checkbox" id="tortured"/>
+                                    <label class="negative" for="tortured">tortured</label></li>
+
+                                <li><input type="checkbox" id="rejected"/>
+                                    <label class="negative" for="rejected">rejected</label></li>
+
+                                <li><input type="checkbox" id="injured"/>
+                                    <label class="negative" for="injured">injured</label></li>
+
+                                <li><input type="checkbox" id="offended"/>
+                                    <label class="negative" for="offended">offended</label></li>
+
+                                <li><input type="checkbox" id="afflicted"/>
+                                    <label class="negative" for="afflicted">afflicted</label></li>
+
+                                <li><input type="checkbox" id="aching"/>
+                                    <label class="negative" for="aching">aching</label></li>
+
+                                <li><input type="checkbox" id="victimized"/>
+                                    <label class="negative" for="victimized">victimized</label></li>
+
+                                <li><input type="checkbox" id="heartbroken"/>
+                                    <label class="negative" for="heartbroken">heartbroken</label></li>
+
+                                <li><input type="checkbox" id="agonized"/>
+                                    <label class="negative" for="agonized">agonized</label></li>
+
+                                <li><input type="checkbox" id="appalled"/>
+                                    <label class="negative" for="appalled">appalled</label></li>
+
+                                <li><input type="checkbox" id="wronged"/>
+                                    <label class="negative" for="wronged">wronged</label></li>
+
+                                <li><input type="checkbox" id="humiliated"/>
+                                    <label class="negative" for="humiliated">humiliated</label></li>
+
+                                <li><input type="checkbox" id="insulted"/>
+                                    <label class="negative" for="insulted">insulted</label></li>
+
+                                <li><input type="checkbox" id="withdrawn"/>
+                                    <label class="negative" for="withdrawn">withdrawn</label></li>
+
+                                <li><input type="checkbox" id="miffed"/>
+                                    <label class="negative" for="miffed">miffed</label></li>
+
+                                <li><input type="checkbox" id="indignant"/>
+                                    <label class="negative" for="indignant">indignant</label></li>
+
+                                <li><input type="checkbox" id="suffering"/>
+                                    <label class="negative" for="suffering">suffering</label></li>
+
+                                <li><input type="checkbox" id="distant"/>
+                                    <label class="negative" for="distant">distant</label></li>
+
+                                <li><input type="checkbox" id="invaded"/>
+                                    <label class="negative" for="invaded">invaded</label></li>
+
+                                <li><input type="checkbox" id="bulldozed"/>
+                                    <label class="negative" for="bulldozed">bulldozed</label></li>
+
+                                <li><input type="checkbox" id="bullied"/>
+                                    <label class="negative" for="bullied">bullied</label></li>
+
+                                <li><input type="checkbox" id="secretive"/>
+                                    <label class="negative" for="secretive">secretive</label></li>
+
+                                <li><input type="checkbox" id="slighted"/>
+                                    <label class="negative" for="slighted">slighted</label></li>
+
+                                <li><input type="checkbox" id="smothered"/>
+                                    <label class="negative" for="smothered">smothered</label></li>
+
+                                <li><input type="checkbox" id="belittled"/>
+                                    <label class="negative" for="belittled">belittled</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>SAD</h3>
-                        <p>tearful<br>
-                        sorrowful<br>
-                        anguished<br>
-                        desolate<br>
-                        unhappy<br>
-                        lonely<br>
-                        grieved<br>
-                        mournful<br>
-                        dismayed<br>
-                        downhearted<br>
-                        over-sensitive<br>
-                        dirty<br>
-                        remorseful<br>
-                        sullen<br>
-                        sour<br>
-                        self-castigating<br>
-                        unworthy<br>
-                        fragile<br>
-                        disconnected<br>
-                        devastated<br>
-                        blindsided<br>
-                        discontented<br>
-                        crying<br>
-                        groaning<br>
-                        moaning<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="tearful"/>
+                                    <label class="negative" for="tearful">tearful</label></li>
+
+                                <li><input type="checkbox" id="sorrowful"/>
+                                    <label class="negative" for="sorrowful">sorrowful</label></li>
+
+                                <li><input type="checkbox" id="anguished"/>
+                                    <label class="negative" for="anguished">anguished</label></li>
+
+                                <li><input type="checkbox" id="desolate"/>
+                                    <label class="negative" for="desolate">desolate</label></li>
+
+                                <li><input type="checkbox" id="unhappy"/>
+                                    <label class="negative" for="unhappy">unhappy</label></li>
+
+                                <li><input type="checkbox" id="lonely"/>
+                                    <label class="negative" for="lonely">lonely</label></li>
+
+                                <li><input type="checkbox" id="grieved"/>
+                                    <label class="negative" for="grieved">grieved</label></li>
+
+                                <li><input type="checkbox" id="mournful"/>
+                                    <label class="negative" for="mournful">mournful</label></li>
+
+                                <li><input type="checkbox" id="dismayed"/>
+                                    <label class="negative" for="dismayed">dismayed</label></li>
+
+                                <li><input type="checkbox" id="downhearted"/>
+                                    <label class="negative" for="downhearted">downhearted</label></li>
+
+                                <li><input type="checkbox" id="over-sensitive"/>
+                                    <label class="negative" for="over-sensitive">over-sensitive</label></li>
+
+                                <li><input type="checkbox" id="dirty"/>
+                                    <label class="negative" for="dirty">dirty</label></li>
+
+                                <li><input type="checkbox" id="remorseful"/>
+                                    <label class="negative" for="remorseful">remorseful</label></li>
+
+                                <li><input type="checkbox" id="sullen"/>
+                                    <label class="negative" for="sullen">sullen</label></li>
+
+                                <li><input type="checkbox" id="sour"/>
+                                    <label class="negative" for="sour">sour</label></li>
+
+                                <li><input type="checkbox" id="self-castigating"/>
+                                    <label class="negative" for="self-castigating">self-castigating</label></li>
+
+                                <li><input type="checkbox" id="unworthy"/>
+                                    <label class="negative" for="unworthy">unworthy</label></li>
+
+                                <li><input type="checkbox" id="fragile"/>
+                                    <label class="negative" for="fragile">fragile</label></li>
+
+                                <li><input type="checkbox" id="disconnected"/>
+                                    <label class="negative" for="disconnected">disconnected</label></li>
+
+                                <li><input type="checkbox" id="devastated"/>
+                                    <label class="negative" for="devastated">devastated</label></li>
+
+                                <li><input type="checkbox" id="blindsided"/>
+                                    <label class="negative" for="blindsided">blindsided</label></li>
+
+                                <li><input type="checkbox" id="discontented"/>
+                                    <label class="negative" for="discontented">discontented</label></li>
+
+                                <li><input type="checkbox" id="crying"/>
+                                    <label class="negative" for="crying">crying</label></li>
+
+                                <li><input type="checkbox" id="groaning"/>
+                                    <label class="negative" for="groaning">groaning</label></li>
+
+                                <li><input type="checkbox" id="moaning"/>
+                                    <label class="negative" for="moaning">moaning</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>JUDGMENTAL</h3>
-                        <p>stony<br>
-                        serious<br>
-                        stern<br>
-                        frowning<br>
-                        recoiling<br>
-                        glaring<br>
-                        disgusted<br>
-                        unfair<br>
-                        attacked<br>
-                        tactless<br>
-                        hurtful<br>
-                        bossy<br>
-                        stilted<br>
-                        stiff<br>
-                        brutal<br>
-                        combative<br>
-                        pushy<br>
-                        neglectful<br>
-                        stonewalling<br>
-                        rude<br>
-                        ranting<br>
-                        scolding<br>
-                        shrill<br>
-                        hard<br>
-                        fake<br>
-                        phony<br>
-                        shallow<br>
-                        taut<br>
-                        territorial<br>
-                        complaining<br>
-                        obsessive<br>
-                        blunt<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="stony"/>
+                                    <label class="negative" for="stony">stony</label></li>
+
+                                <li><input type="checkbox" id="serious"/>
+                                    <label class="negative" for="serious">serious</label></li>
+
+                                <li><input type="checkbox" id="stern"/>
+                                    <label class="negative" for="stern">stern</label></li>
+
+                                <li><input type="checkbox" id="frowning"/>
+                                    <label class="negative" for="frowning">frowning</label></li>
+
+                                <li><input type="checkbox" id="recoiling"/>
+                                    <label class="negative" for="recoiling">recoiling</label></li>
+
+                                <li><input type="checkbox" id="glaring"/>
+                                    <label class="negative" for="glaring">glaring</label></li>
+
+                                <li><input type="checkbox" id="disgusted"/>
+                                    <label class="negative" for="disgusted">disgusted</label></li>
+
+                                <li><input type="checkbox" id="unfair"/>
+                                    <label class="negative" for="unfair">unfair</label></li>
+
+                                <li><input type="checkbox" id="attacked"/>
+                                    <label class="negative" for="attacked">attacked</label></li>
+
+                                <li><input type="checkbox" id="tactless"/>
+                                    <label class="negative" for="tactless">tactless</label></li>
+
+                                <li><input type="checkbox" id="hurtful"/>
+                                    <label class="negative" for="hurtful">hurtful</label></li>
+
+                                <li><input type="checkbox" id="bossy"/>
+                                    <label class="negative" for="bossy">bossy</label></li>
+
+                                <li><input type="checkbox" id="stilted"/>
+                                    <label class="negative" for="stilted">stilted</label></li>
+
+                                <li><input type="checkbox" id="stiff"/>
+                                    <label class="negative" for="stiff">stiff</label></li>
+
+                                <li><input type="checkbox" id="brutal"/>
+                                    <label class="negative" for="brutal">brutal</label></li>
+
+                                <li><input type="checkbox" id="combative"/>
+                                    <label class="negative" for="combative">combative</label></li>
+
+                                <li><input type="checkbox" id="pushy"/>
+                                    <label class="negative" for="pushy">pushy</label></li>
+
+                                <li><input type="checkbox" id="neglectful"/>
+                                    <label class="negative" for="neglectful">neglectful</label></li>
+
+                                <li><input type="checkbox" id="stonewalling"/>
+                                    <label class="negative" for="stonewalling">stonewalling</label></li>
+
+                                <li><input type="checkbox" id="rude"/>
+                                    <label class="negative" for="rude">rude</label></li>
+
+                                <li><input type="checkbox" id="ranting"/>
+                                    <label class="negative" for="ranting">ranting</label></li>
+
+                                <li><input type="checkbox" id="scolding"/>
+                                    <label class="negative" for="scolding">scolding</label></li>
+
+                                <li><input type="checkbox" id="shrill"/>
+                                    <label class="negative" for="shrill">shrill</label></li>
+
+                                <li><input type="checkbox" id="hard"/>
+                                    <label class="negative" for="hard">hard</label></li>
+
+                                <li><input type="checkbox" id="fake"/>
+                                    <label class="negative" for="fake">fake</label></li>
+
+                                <li><input type="checkbox" id="phony"/>
+                                    <label class="negative" for="phony">phony</label></li>
+
+                                <li><input type="checkbox" id="shallow"/>
+                                    <label class="negative" for="shallow">shallow</label></li>
+
+                                <li><input type="checkbox" id="taut"/>
+                                    <label class="negative" for="taut">taut</label></li>
+
+                                <li><input type="checkbox" id="territorial"/>
+                                    <label class="negative" for="territorial">territorial</label></li>
+
+                                <li><input type="checkbox" id="complaining"/>
+                                    <label class="negative" for="complaining">complaining</label></li>
+
+                                <li><input type="checkbox" id="obsessive"/>
+                                    <label class="negative" for="obsessive">obsessive</label></li>
+
+                                <li><input type="checkbox" id="blunt"/>
+                                    <label class="negative" for="blunt">blunt</label></li>
+                            </ul>
                     </div>
 
                 </section>
 
                 <section id="lower">
-                    
+
                     <div class="column">
                         <h3>OPEN</h3>
-                        <p>understanding<br>
-                        confident<br>
-                        easy<br>
-                        connected<br>
-                        free<br>
-                        sympathetic<br>
-                        interested<br>
-                        satisfied<br>
-                        receptive<br>
-                        accepting<br>
-                        kind<br>
-                        harmonious<br>
-                        empathetic<br>
-                        tolerant<br>
-                        friendly<br>
-                        approachable<br>
-                        outgoing<br>
-                        flowing<br>
-                        flexible<br>
-                        present<br>
-                        listening<br>
-                        welcoming<br>
-                        embracing<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="understanding"/>
+                                    <label class="positive" for="understanding">understanding</label></li>
+
+                                <li><input type="checkbox" id="confident"/>
+                                    <label class="positive" for="confident">confident</label></li>
+
+                                <li><input type="checkbox" id="easy"/>
+                                    <label class="positive" for="easy">easy</label></li>
+
+                                <li><input type="checkbox" id="connected"/>
+                                    <label class="positive" for="connected">connected</label></li>
+
+                                <li><input type="checkbox" id="free"/>
+                                    <label class="positive" for="free">free</label></li>
+
+                                <li><input type="checkbox" id="interested"/>
+                                    <label class="positive" for="interested">interested</label></li>
+
+                                <li><input type="checkbox" id="satisfied"/>
+                                    <label class="positive" for="satisfied">satisfied</label></li>
+
+                                <li><input type="checkbox" id="receptive"/>
+                                    <label class="positive" for="receptive">receptive</label></li>
+
+                                <li><input type="checkbox" id="accepting"/>
+                                    <label class="positive" for="accepting">accepting</label></li>
+
+                                <li><input type="checkbox" id="kind"/>
+                                    <label class="positive" for="kind">kind</label></li>
+
+                                <li><input type="checkbox" id="harmonious"/>
+                                    <label class="positive" for="harmonious">harmonious</label></li>
+                      
+                                <li><input type="checkbox" id="empathetic"/>
+                                    <label class="positive" for="empathetic">empathetic</label></li>
+
+                                <li><input type="checkbox" id="tolerant"/>
+                                    <label class="positive" for="tolerant">tolerant</label></li>
+
+                                <li><input type="checkbox" id="friendly"/>
+                                    <label class="positive" for="friendly">friendly</label></li>
+
+                                <li><input type="checkbox" id="approachable"/>
+                                    <label class="positive" for="approachable">approachable</label></li>
+
+                                <li><input type="checkbox" id="outgoing"/>
+                                    <label class="positive" for="outgoing">outgoing</label></li>
+
+                                <li><input type="checkbox" id="flowing"/>
+                                    <label class="positive" for="flowing">flowing</label></li>
+
+                                <li><input type="checkbox" id="flexible"/>
+                                    <label class="positive" for="flexible">flexible</label></li>
+
+                                <li><input type="checkbox" id="present"/>
+                                    <label class="positive" for="present">present</label></li>
+
+                                <li><input type="checkbox" id="listening"/>
+                                    <label class="positive" for="listening">listening</label></li>
+
+                                <li><input type="checkbox" id="welcoming"/>
+                                    <label class="positive" for="welcoming">welcoming</label></li>
+
+                                <li><input type="checkbox" id="embracing"/>
+                                    <label class="positive" for="embracing">embracing</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>LOVING</h3>
-                        <p>considerate<br>
-                        affectionate<br>
-                        sensitive<br>
-                        tender<br>
-                        devoted<br>
-                        attracted<br>
-                        passionate<br>
-                        admiring<br>
-                        warm<br>
-                        touched<br>
-                        close<br>
-                        loved<br>
-                        sweet<br>
-                        gentle<br>
-                        compassionate<br>
-                        caring<br>
-                        allowing<br>
-                        nonjudgmental<br>
-                        appreciative<br>
-                        respectful<br>
-                        humble<br>
-                        gracious<br>
-                        patient<br>
-                        honoring<br>
-                        expansive<br>
-                        kindly<br>
-                        grateful<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="considerate"/>
+                                    <label class="positive" for="considerate">considerate</label></li>
+
+                                <li><input type="checkbox" id="affectionate"/>
+                                    <label class="positive" for="affectionate">affectionate</label></li>
+
+                                <li><input type="checkbox" id="sensitive"/>
+                                    <label class="positive" for="sensitive">sensitive</label></li>
+
+                                <li><input type="checkbox" id="tender"/>
+                                    <label class="positive" for="tender">tender</label></li>
+
+                                <li><input type="checkbox" id="devoted"/>
+                                    <label class="positive" for="devoted">devoted</label></li>
+
+                                <li><input type="checkbox" id="attracted"/>
+                                    <label class="positive" for="attracted">attracted</label></li>
+
+                                <li><input type="checkbox" id="passionate"/>
+                                    <label class="positive" for="passionate">passionate</label></li>
+
+                                <li><input type="checkbox" id="admiring"/>
+                                    <label class="positive" for="admiring">admiring</label></li>
+
+                                <li><input type="checkbox" id="warm"/>
+                                    <label class="positive" for="warm">warm</label></li>
+
+                                <li><input type="checkbox" id="touched"/>
+                                    <label class="positive" for="touched">touched</label></li>
+
+                                <li><input type="checkbox" id="close"/>
+                                    <label class="positive" for="close">close</label></li>
+
+                                <li><input type="checkbox" id="loved"/>
+                                    <label class="positive" for="loved">loved</label></li>
+
+                                <li><input type="checkbox" id="sweet"/>
+                                    <label class="positive" for="sweet">sweet</label></li>
+
+                                <li><input type="checkbox" id="gentle"/>
+                                    <label class="positive" for="gentle">gentle</label></li>
+
+                                <li><input type="checkbox" id="compassionate"/>
+                                    <label class="positive" for="compassionate">compassionate</label></li>
+
+                                <li><input type="checkbox" id="caring"/>
+                                    <label class="positive" for="caring">caring</label></li>
+
+                                <li><input type="checkbox" id="allowing"/>
+                                    <label class="positive" for="allowing">allowing</label></li>
+
+                                <li><input type="checkbox" id="nonjudgmental"/>
+                                    <label class="positive" for="nonjudgmental">nonjudgmental</label></li>
+
+                                <li><input type="checkbox" id="appreciative"/>
+                                    <label class="positive" for="appreciative">appreciative</label></li>
+
+                                <li><input type="checkbox" id="respectful"/>
+                                    <label class="positive" for="respectful">respectful</label></li>
+
+                                <li><input type="checkbox" id="humble"/>
+                                    <label class="positive" for="humble">humble</label></li>
+
+                                <li><input type="checkbox" id="gracious"/>
+                                    <label class="positive" for="gracious">gracious</label></li>
+
+                                <li><input type="checkbox" id="patient"/>
+                                    <label class="positive" for="patient">patient</label></li>
+
+                                <li><input type="checkbox" id="honoring"/>
+                                    <label class="positive" for="honoring">honoring</label></li>
+
+                                <li><input type="checkbox" id="expansive"/>
+                                    <label class="positive" for="expansive">expansive</label></li>
+
+                                <li><input type="checkbox" id="kindly"/>
+                                    <label class="positive" for="kindly">kindly</label></li>
+
+                                <li><input type="checkbox" id="grateful"/>
+                                    <label class="positive" for="grateful">grateful</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>HAPPY</h3>
-                        <p>blissful<br>
-                        joyous<br>
-                        delighted<br>
-                        overjoyed<br>
-                        gleeful<br>
-                        thankful<br>
-                        festive<br>
-                        ecstatic<br>
-                        satisfied<br>
-                        glad<br>
-                        cheerful<br>
-                        sunny<br>
-                        elated<br>
-                        jubilant<br>
-                        jovial<br>
-                        fun-loving<br>
-                        lighthearted<br>
-                        easygoing<br>
-                        mellow<br>
-                        happy-go-<br>&nbsp;&nbsp;lucky<br>
-                        glorious<br>
-                        innocent<br>
-                        child-like<br>
-                        gratified<br>
-                        euphoric<br>
-                        rapturous<br>
-                        in good humor<br>
-                        in heaven<br>
-                        on top of<br>&nbsp;&nbsp;the world<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="blissful"/>
+                                    <label class="positive" for="blissful">blissful</label></li>
+
+                                <li><input type="checkbox" id="joyous"/>
+                                    <label class="positive" for="joyous">joyous</label></li>
+
+                                <li><input type="checkbox" id="delighted"/>
+                                    <label class="positive" for="delighted">delighted</label></li>
+
+                                <li><input type="checkbox" id="overjoyed"/>
+                                    <label class="positive" for="overjoyed">overjoyed</label></li>
+
+                                <li><input type="checkbox" id="gleeful"/>
+                                    <label class="positive" for="gleeful">gleeful</label></li>
+
+                                <li><input type="checkbox" id="thankful"/>
+                                    <label class="positive" for="thankful">thankful</label></li>
+
+                                <li><input type="checkbox" id="festive"/>
+                                    <label class="positive" for="festive">festive</label></li>
+
+                                <li><input type="checkbox" id="ecstatic"/>
+                                    <label class="positive" for="ecstatic">ecstatic</label></li>
+
+                                <li><input type="checkbox" id="satisfied2"/>
+                                    <label class="positive" for="satisfied2">satisfied</label></li>
+
+                                <li><input type="checkbox" id="glad"/>
+                                    <label class="positive" for="glad">glad</label></li>
+
+                                <li><input type="checkbox" id="cheerful"/>
+                                    <label class="positive" for="cheerful">cheerful</label></li>
+
+                                <li><input type="checkbox" id="sunny"/>
+                                    <label class="positive" for="sunny">sunny</label></li>
+
+                                <li><input type="checkbox" id="elated"/>
+                                    <label class="positive" for="elated">elated</label></li>
+
+                                <li><input type="checkbox" id="jubilant"/>
+                                    <label class="positive" for="jubilant">jubilant</label></li>
+
+                                <li><input type="checkbox" id="jovial"/>
+                                    <label class="positive" for="jovial">jovial</label></li>
+
+                                <li><input type="checkbox" id="fun-loving"/>
+                                    <label class="positive" for="fun-loving">fun-loving</label></li>
+
+                                <li><input type="checkbox" id="lighthearted"/>
+                                    <label class="positive" for="lighthearted">lighthearted</label></li>
+
+                                <li><input type="checkbox" id="easygoing"/>
+                                    <label class="positive" for="easygoing">easygoing</label></li>
+
+                                <li><input type="checkbox" id="mellow"/>
+                                    <label class="positive" for="mellow">mellow</label></li>
+
+                                <li><input type="checkbox" id="happy-go-lucky"/>
+                                    <label class="positive" for="happy-go-lucky">happy-go-<br>&nbsp;&nbsp;lucky</label></li>
+
+                                <li><input type="checkbox" id="glorious"/>
+                                    <label class="positive" for="glorious">glorious</label></li>
+
+                                <li><input type="checkbox" id="innocent"/>
+                                    <label class="positive" for="innocent">innocent</label></li>
+
+                                <li><input type="checkbox" id="child-like"/>
+                                    <label class="positive" for="child-like">child-like</label></li>
+
+                                <li><input type="checkbox" id="gratified"/>
+                                    <label class="positive" for="gratified">gratified</label></li>
+
+                                <li><input type="checkbox" id="euphoric"/>
+                                    <label class="positive" for="euphoric">euphoric</label></li>
+
+                                <li><input type="checkbox" id="rapturous"/>
+                                    <label class="positive" for="rapturous">rapturous</label></li>
+
+                                <li><input type="checkbox" id="in good humor"/>
+                                    <label class="positive" for="in good humor">in good humor</label></li>
+
+                                <li><input type="checkbox" id="in heaven"/>
+                                    <label class="positive" for="in heaven">in heaven</label></li>
+
+                                <li><input type="checkbox" id="on top of the world"/>
+                                    <label class="positive" for="on top of the world">on top of<br>&nbsp;&nbsp;the world</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>INTERESTED</h3>
-                        <p>fascinated<br>
-                        intrigued<br>
-                        absorbed<br>
-                        inquisitive<br>
-                        engrossed<br>
-                        curious<br>
-                        amazed<br>
-                        involved<br>
-                        attentive<br>
-                        observant<br>
-                        amused<br>
-                        thoughtful<br>
-                        courteous<br>
-                        intent<br>
-                        focused<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="fascinated"/>
+                                    <label class="positive" for="fascinated">fascinated</label></li>
+
+                                <li><input type="checkbox" id="intrigued"/>
+                                    <label class="positive" for="intrigued">intrigued</label></li>
+
+                                <li><input type="checkbox" id="absorbed"/>
+                                    <label class="positive" for="absorbed">absorbed</label></li>
+
+                                <li><input type="checkbox" id="inquisitive"/>
+                                    <label class="positive" for="inquisitive">inquisitive</label></li>
+
+                                <li><input type="checkbox" id="engrossed"/>
+                                    <label class="positive" for="engrossed">engrossed</label></li>
+
+                                <li><input type="checkbox" id="curious"/>
+                                    <label class="positive" for="curious">curious</label></li>
+
+                                <li><input type="checkbox" id="amazed"/>
+                                    <label class="positive" for="amazed">amazed</label></li>
+
+                                <li><input type="checkbox" id="involved"/>
+                                    <label class="positive" for="involved">involved</label></li>
+
+                                <li><input type="checkbox" id="attentive"/>
+                                    <label class="positive" for="attentive">attentive</label></li>
+
+                                <li><input type="checkbox" id="observant"/>
+                                    <label class="positive" for="observant">observant</label></li>
+
+                                <li><input type="checkbox" id="amused"/>
+                                    <label class="positive" for="amused">amused</label></li>
+
+                                <li><input type="checkbox" id="thoughtful"/>
+                                    <label class="positive" for="thoughtful">thoughtful</label></li>
+
+                                <li><input type="checkbox" id="courteous"/>
+                                    <label class="positive" for="courteous">courteous</label></li>
+
+                                <li><input type="checkbox" id="intent"/>
+                                    <label class="positive" for="intent">intent</label></li>
+
+                                <li><input type="checkbox" id="focused"/>
+                                    <label class="positive" for="focused">focused</label></li>
+                       
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>ALIVE</h3>
-                        <p>playful<br>
-                        courageous<br>
-                        energetic<br>
-                        liberated<br>
-                        optimistic<br>
-                        frisky<br>
-                        animated<br>
-                        spirited<br>
-                        thrilled<br>
-                        wonderful<br>
-                        funny<br>
-                        great<br>
-                        giving<br>
-                        sharing<br>
-                        intelligent<br>
-                        exhilarated<br>
-                        equal<br>
-                        excited<br>
-                        enjoying<br>
-                        communicative<br>
-                        active<br>
-                        spunky<br>
-                        youthful<br>
-                        vigorous<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="playful"/>
+                                    <label class="positive" for="playful">playful</label></li>
+
+                                <li><input type="checkbox" id="courageous"/>
+                                    <label class="positive" for="courageous">courageous</label></li>
+
+                                <li><input type="checkbox" id="energetic"/>
+                                    <label class="positive" for="energetic">energetic</label></li>
+
+                                <li><input type="checkbox" id="liberated"/>
+                                    <label class="positive" for="liberated">liberated</label></li>
+
+                                <li><input type="checkbox" id="optimistic"/>
+                                    <label class="positive" for="optimistic">optimistic</label></li>
+
+                                <li><input type="checkbox" id="frisky"/>
+                                    <label class="positive" for="frisky">frisky</label></li>
+
+                                <li><input type="checkbox" id="animated"/>
+                                    <label class="positive" for="animated">animated</label></li>
+
+                                <li><input type="checkbox" id="spirited"/>
+                                    <label class="positive" for="spirited">spirited</label></li>
+
+                                <li><input type="checkbox" id="thrilled"/>
+                                    <label class="positive" for="thrilled">thrilled</label></li>
+
+                                <li><input type="checkbox" id="wonderful"/>
+                                    <label class="positive" for="wonderful">wonderful</label></li>
+
+                                <li><input type="checkbox" id="funny"/>
+                                    <label class="positive" for="funny">funny</label></li>
+
+                                <li><input type="checkbox" id="great"/>
+                                    <label class="positive" for="great">great</label></li>
+
+                                <li><input type="checkbox" id="giving"/>
+                                    <label class="positive" for="giving">giving</label></li>
+
+                                <li><input type="checkbox" id="sharing"/>
+                                    <label class="positive" for="sharing">sharing</label></li>
+
+                                <li><input type="checkbox" id="intelligent"/>
+                                    <label class="positive" for="intelligent">intelligent</label></li>
+
+                                <li><input type="checkbox" id="exhilarated"/>
+                                    <label class="positive" for="exhilarated">exhilarated</label></li>
+
+                                <li><input type="checkbox" id="equal"/>
+                                    <label class="positive" for="equal">equal</label></li>
+
+                                <li><input type="checkbox" id="excited"/>
+                                    <label class="positive" for="excited">excited</label></li>
+
+                                <li><input type="checkbox" id="enjoying"/>
+                                    <label class="positive" for="enjoying">enjoying</label></li>
+
+                                <li><input type="checkbox" id="communicative"/>
+                                    <label class="positive" for="communicative">communicative</label></li>
+
+                                <li><input type="checkbox" id="active"/>
+                                    <label class="positive" for="active">active</label></li>
+
+                                <li><input type="checkbox" id="spunky"/>
+                                    <label class="positive" for="spunky">spunky</label></li>
+
+                                <li><input type="checkbox" id="youthful"/>
+                                    <label class="positive" for="youthful">youthful</label></li>
+
+                                <li><input type="checkbox" id="vigorous"/>
+                                    <label class="positive" for="vigorous">vigorous</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>POSITIVE</h3>
-                        <p>eager<br>
-                        keen<br>
-                        earnest<br>
-                        inspired<br>
-                        enthusiastic<br>
-                        bold<br>
-                        brave<br>
-                        daring<br>
-                        hopeful<br>
-                        upbeat<br>
-                        beautiful<br>
-                        creative<br>
-                        constructive<br>
-                        helpful<br>
-                        resourceful<br>
-                        motivated<br>
-                        cooperative<br>
-                        productive<br>
-                        exuberant<br>
-                        in the zone<br>
-                        responsive<br>
-                        conscientious<br>
-                        approving<br>
-                        honored<br>
-                        privileged<br>
-                        adaptable<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="eager"/>
+                                    <label class="positive" for="eager">eager</label></li>
+
+                                <li><input type="checkbox" id="keen"/>
+                                    <label class="positive" for="keen">keen</label></li>
+
+                                <li><input type="checkbox" id="earnest"/>
+                                    <label class="positive" for="earnest">earnest</label></li>
+
+                                <li><input type="checkbox" id="inspired"/>
+                                    <label class="positive" for="inspired">inspired</label></li>
+
+                                <li><input type="checkbox" id="enthusiastic"/>
+                                    <label class="positive" for="enthusiastic">enthusiastic</label></li>
+
+                                <li><input type="checkbox" id="bold"/>
+                                    <label class="positive" for="bold">bold</label></li>
+
+                                <li><input type="checkbox" id="brave"/>
+                                    <label class="positive" for="brave">brave</label></li>
+
+                                <li><input type="checkbox" id="daring"/>
+                                    <label class="positive" for="daring">daring</label></li>
+
+                                <li><input type="checkbox" id="hopeful"/>
+                                    <label class="positive" for="hopeful">hopeful</label></li>
+
+                                <li><input type="checkbox" id="upbeat"/>
+                                    <label class="positive" for="upbeat">upbeat</label></li>
+
+                                <li><input type="checkbox" id="beautiful"/>
+                                    <label class="positive" for="beautiful">beautiful</label></li>
+
+                                <li><input type="checkbox" id="creative"/>
+                                    <label class="positive" for="creative">creative</label></li>
+
+                                <li><input type="checkbox" id="constructive"/>
+                                    <label class="positive" for="constructive">constructive</label></li>
+
+                                <li><input type="checkbox" id="helpful"/>
+                                    <label class="positive" for="helpful">helpful</label></li>
+
+                                <li><input type="checkbox" id="resourceful"/>
+                                    <label class="positive" for="resourceful">resourceful</label></li>
+
+                                <li><input type="checkbox" id="motivated"/>
+                                    <label class="positive" for="motivated">motivated</label></li>
+
+                                <li><input type="checkbox" id="cooperative"/>
+                                    <label class="positive" for="cooperative">cooperative</label></li>
+
+                                <li><input type="checkbox" id="productive"/>
+                                    <label class="positive" for="productive">productive</label></li>
+
+                                <li><input type="checkbox" id="exuberant"/>
+                                    <label class="positive" for="exuberant">exuberant</label></li>
+
+                                <li><input type="checkbox" id="in the zone"/>
+                                    <label class="positive" for="in the zone">in the zone</label></li>
+
+                                <li><input type="checkbox" id="responsive"/>
+                                    <label class="positive" for="responsive">responsive</label></li>
+
+                                <li><input type="checkbox" id="conscientious"/>
+                                    <label class="positive" for="conscientious">conscientious</label></li>
+
+                                <li><input type="checkbox" id="approving"/>
+                                    <label class="positive" for="approving">approving</label></li>
+
+                                <li><input type="checkbox" id="honored"/>
+                                    <label class="positive" for="honored">honored</label></li>
+
+                                <li><input type="checkbox" id="privileged"/>
+                                    <label class="positive" for="privileged">privileged</label></li>
+
+                                <li><input type="checkbox" id="adaptable"/>
+                                    <label class="positive" for="adaptable">adaptable</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>PEACEFUL</h3>
-                        <p>calm<br>
-                        good<br>
-                        at ease<br>
-                        comfortable<br>
-                        pleased<br>
-                        encouraged<br>
-                        surprised<br>
-                        content<br>
-                        quiet<br>
-                        certain<br>
-                        relaxed<br>
-                        serene<br>
-                        bright<br>
-                        blessed<br>
-                        assured<br>
-                        clear<br>
-                        balanced<br>
-                        fine<br>
-                        okay<br>
-                        grateful<br>
-                        carefree<br>
-                        adequate<br>
-                        fulfilled<br>
-                        genuine<br>
-                        authentic<br>
-                        forgiving<br>
-                        sincere<br>
-                        uplifted<br>
-                        unburdened<br>
-                        confident<br>
-                        self-sufficient<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="calm"/>
+                                    <label class="positive" for="calm">calm</label></li>
+
+                                <li><input type="checkbox" id="good"/>
+                                    <label class="positive" for="good">good</label></li>
+
+                                <li><input type="checkbox" id="at ease"/>
+                                    <label class="positive" for="at ease">at ease</label></li>
+
+                                <li><input type="checkbox" id="comfortable"/>
+                                    <label class="positive" for="comfortable">comfortable</label></li>
+
+                                <li><input type="checkbox" id="pleased"/>
+                                    <label class="positive" for="pleased">pleased</label></li>
+
+                                <li><input type="checkbox" id="encouraged"/>
+                                    <label class="positive" for="encouraged">encouraged</label></li>
+
+                                <li><input type="checkbox" id="surprised"/>
+                                    <label class="positive" for="surprised">surprised</label></li>
+
+                                <li><input type="checkbox" id="content"/>
+                                    <label class="positive" for="content">content</label></li>
+
+                                <li><input type="checkbox" id="quiet"/>
+                                    <label class="positive" for="quiet">quiet</label></li>
+
+                                <li><input type="checkbox" id="certain"/>
+                                    <label class="positive" for="certain">certain</label></li>
+
+                                <li><input type="checkbox" id="relaxed"/>
+                                    <label class="positive" for="relaxed">relaxed</label></li>
+
+                                <li><input type="checkbox" id="serene"/>
+                                    <label class="positive" for="serene">serene</label></li>
+
+                                <li><input type="checkbox" id="bright"/>
+                                    <label class="positive" for="bright">bright</label></li>
+
+                                <li><input type="checkbox" id="blessed"/>
+                                    <label class="positive" for="blessed">blessed</label></li>
+
+                                <li><input type="checkbox" id="assured"/>
+                                    <label class="positive" for="assured">assured</label></li>
+
+                                <li><input type="checkbox" id="clear"/>
+                                    <label class="positive" for="clear">clear</label></li>
+
+                                <li><input type="checkbox" id="balanced"/>
+                                    <label class="positive" for="balanced">balanced</label></li>
+
+                                <li><input type="checkbox" id="fine"/>
+                                    <label class="positive" for="fine">fine</label></li>
+
+                                <li><input type="checkbox" id="okay"/>
+                                    <label class="positive" for="okay">okay</label></li>
+
+                                <li><input type="checkbox" id="grateful2"/>
+                                    <label class="positive" for="grateful2">grateful</label></li>
+
+                                <li><input type="checkbox" id="carefree"/>
+                                    <label class="positive" for="carefree">carefree</label></li>
+
+                                <li><input type="checkbox" id="adequate"/>
+                                    <label class="positive" for="adequate">adequate</label></li>
+
+                                <li><input type="checkbox" id="fulfilled"/>
+                                    <label class="positive" for="fulfilled">fulfilled</label></li>
+
+                                <li><input type="checkbox" id="genuine"/>
+                                    <label class="positive" for="genuine">genuine</label></li>
+
+                                <li><input type="checkbox" id="authentic"/>
+                                    <label class="positive" for="authentic">authentic</label></li>
+
+                                <li><input type="checkbox" id="forgiving"/>
+                                    <label class="positive" for="forgiving">forgiving</label></li>
+
+                                <li><input type="checkbox" id="sincere"/>
+                                    <label class="positive" for="sincere">sincere</label></li>
+
+                                <li><input type="checkbox" id="uplifted"/>
+                                    <label class="positive" for="uplifted">uplifted</label></li>
+
+                                <li><input type="checkbox" id="unburdened"/>
+                                    <label class="positive" for="unburdened">unburdened</label></li>
+
+                                <li><input type="checkbox" id="confident2"/>
+                                    <label class="positive" for="confident2">confident</label></li>
+
+                                <li><input type="checkbox" id="self-sufficient"/>
+                                    <label class="positive" for="self-sufficient">self-sufficient</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>STRONG</h3>
-                        <p>reliable<br>
-                        sure<br>
-                        unique<br>
-                        dynamic<br>
-                        tenacious<br>
-                        hardy<br>
-                        secure<br>
-                        stable<br>
-                        honest<br>
-                        composed<br>
-                        self-affirming<br>
-                        truthful<br>
-                        supportive<br>
-                        excellent<br>
-                        perseverant<br>
-                        responsible<br>
-                        energized<br>
-                        sane<br>
-                        complete<br>
-                        mature<br>
-                        solid<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="reliable"/>
+                                    <label class="positive" for="reliable">reliable</label></li>
+
+                                <li><input type="checkbox" id="sure"/>
+                                    <label class="positive" for="sure">sure</label></li>
+
+                                <li><input type="checkbox" id="unique"/>
+                                    <label class="positive" for="unique">unique</label></li>
+
+                                <li><input type="checkbox" id="dynamic"/>
+                                    <label class="positive" for="dynamic">dynamic</label></li>
+
+                                <li><input type="checkbox" id="tenacious"/>
+                                    <label class="positive" for="tenacious">tenacious</label></li>
+
+                                <li><input type="checkbox" id="hardy"/>
+                                    <label class="positive" for="hardy">hardy</label></li>
+
+                                <li><input type="checkbox" id="secure"/>
+                                    <label class="positive" for="secure">secure</label></li>
+
+                                <li><input type="checkbox" id="stable"/>
+                                    <label class="positive" for="stable">stable</label></li>
+
+                                <li><input type="checkbox" id="honest"/>
+                                    <label class="positive" for="honest">honest</label></li>
+
+                                <li><input type="checkbox" id="composed"/>
+                                    <label class="positive" for="composed">composed</label></li>
+
+                                <li><input type="checkbox" id="self-affirming"/>
+                                    <label class="positive" for="self-affirming">self-affirming</label></li>
+
+                                <li><input type="checkbox" id="truthful"/>
+                                    <label class="positive" for="truthful">truthful</label></li>
+
+                                <li><input type="checkbox" id="supportive"/>
+                                    <label class="positive" for="supportive">supportive</label></li>
+
+                                <li><input type="checkbox" id="excellent"/>
+                                    <label class="positive" for="excellent">excellent</label></li>
+
+                                <li><input type="checkbox" id="perseverant"/>
+                                    <label class="positive" for="perseverant">perseverant</label></li>
+
+                                <li><input type="checkbox" id="responsible"/>
+                                    <label class="positive" for="responsible">responsible</label></li>
+
+                                <li><input type="checkbox" id="energized"/>
+                                    <label class="positive" for="energized">energized</label></li>
+
+                                <li><input type="checkbox" id="sane"/>
+                                    <label class="positive" for="sane">sane</label></li>
+
+                                <li><input type="checkbox" id="complete"/>
+                                    <label class="positive" for="complete">complete</label></li>
+
+                                <li><input type="checkbox" id="mature"/>
+                                    <label class="positive" for="mature">mature</label></li>
+
+                                <li><input type="checkbox" id="solid"/>
+                                    <label class="positive" for="solid">solid</label></li>
+                            </ul>
                     </div>
 
                     <div class="column">
                         <h3>RELAXED</h3>
-                        <p>glowing<br>
-                        radiant<br>
-                        beaming<br>
-                        reflective<br>
-                        smiling<br>
-                        grounded<br>
-                        unhurried<br>
-                        open-minded<br>
-                        efficient<br>
-                        non-controlling<br>
-                        unassuming<br>
-                        trusting<br>
-                        supported<br>
-                        fluid<br>
-                        light<br>
-                        spontaneous<br>
-                        aware<br>
-                        healthy<br>
-                        meditative<br>
-                        still<br>
-                        rested<br>
-                        waiting<br>
-                        laughing<br>
-                        graceful<br>
-                        natural<br>
-                        steady<br>
-                        centered<br>
-                        placid<br></p>
+                            <ul>
+                                <li><input type="checkbox" id="glowing"/>
+                                    <label class="positive" for="glowing">glowing</label></li>
+
+                                <li><input type="checkbox" id="radiant"/>
+                                    <label class="positive" for="radiant">radiant</label></li>
+
+                                <li><input type="checkbox" id="beaming"/>
+                                    <label class="positive" for="beaming">beaming</label></li>
+
+                                <li><input type="checkbox" id="reflective"/>
+                                    <label class="positive" for="reflective">reflective</label></li>
+
+                                <li><input type="checkbox" id="smiling"/>
+                                    <label class="positive" for="smiling">smiling</label></li>
+
+                                <li><input type="checkbox" id="grounded"/>
+                                    <label class="positive" for="grounded">grounded</label></li>
+
+                                <li><input type="checkbox" id="unhurried"/>
+                                    <label class="positive" for="unhurried">unhurried</label></li>
+
+                                <li><input type="checkbox" id="open-minded"/>
+                                    <label class="positive" for="open-minded">open-minded</label></li>
+
+                                <li><input type="checkbox" id="efficient"/>
+                                    <label class="positive" for="efficient">efficient</label></li>
+
+                                <li><input type="checkbox" id="non-controlling"/>
+                                    <label class="positive" for="non-controlling">non-controlling</label></li>
+
+                                <li><input type="checkbox" id="unassuming"/>
+                                    <label class="positive" for="unassuming">unassuming</label></li>
+
+                                <li><input type="checkbox" id="trusting"/>
+                                    <label class="positive" for="trusting">trusting</label></li>
+
+                                <li><input type="checkbox" id="supported"/>
+                                    <label class="positive" for="supported">supported</label></li>
+
+                                <li><input type="checkbox" id="fluid"/>
+                                    <label class="positive" for="fluid">fluid</label></li>
+
+                                <li><input type="checkbox" id="light"/>
+                                    <label class="positive" for="light">light</label></li>
+
+                                <li><input type="checkbox" id="spontaneous"/>
+                                    <label class="positive" for="spontaneous">spontaneous</label></li>
+
+                                <li><input type="checkbox" id="aware"/>
+                                    <label class="positive" for="aware">aware</label></li>
+
+                                <li><input type="checkbox" id="healthy"/>
+                                    <label class="positive" for="healthy">healthy</label></li>
+
+                                <li><input type="checkbox" id="meditative"/>
+                                    <label class="positive" for="meditative">meditative</label></li>
+
+                                <li><input type="checkbox" id="still"/>
+                                    <label class="positive" for="still">still</label></li>
+
+                                <li><input type="checkbox" id="rested"/>
+                                    <label class="positive" for="rested">rested</label></li>
+
+                                <li><input type="checkbox" id="waiting"/>
+                                    <label class="positive" for="waiting">waiting</label></li>
+
+                                <li><input type="checkbox" id="laughing"/>
+                                    <label class="positive" for="laughing">laughing</label></li>
+
+                                <li><input type="checkbox" id="graceful"/>
+                                    <label class="positive" for="graceful">graceful</label></li>
+
+                                <li><input type="checkbox" id="natural"/>
+                                    <label class="positive" for="natural">natural</label></li>
+
+                                <li><input type="checkbox" id="steady"/>
+                                    <label class="positive" for="steady">steady</label></li>
+
+                                <li><input type="checkbox" id="centered"/>
+                                    <label class="positive" for="centered">centered</label></li>
+
+                                <li><input type="checkbox" id="placid"/>
+                                    <label class="positive" for="placid">placid</label></li>
+                            </ul>
                     </div>
 
                 </section>
